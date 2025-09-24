@@ -1,130 +1,260 @@
-:root{
-  --margin-side: 15%;
-  --content-max-width: 1000px;
-  --brand-color-1: #5b86e5;
-  --brand-color-2: #36d1dc;
-  --text-color: #222;
-  --muted: #555;
-  --footer-height: 60px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-html,body{height:100%;}
-body{
-  margin: 0;
-  padding-left: var(--margin-side);
-  padding-right: var(--margin-side);
-  font-family: Arial, Helvetica, sans-serif;
-  color:var(--text-color);
-  background: #fafafa;
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.0;
+    background-color: white;
+    color: #333;
 }
 
-.container{
+.conteudo {
+    margin: 0 auto;
+    padding: 0 15%;
+}
+
+.cabecalho {
+    background: linear-gradient(135deg, #3122b641, #181249), url('menina.jpg');
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.cabecalho h1 {
+    font-size: 3em;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.cabecalho p {
+    font-size: 1.3em;
+    font-weight: 300;
+}
+
+.principal {
+    background-color: white;
+    padding: 60px 0;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.secao {
+    margin-bottom: 50px;
+}
+
+.secao h2 {
+    font-size: 1.8em;
+    color: #333;
+    /* text-align: center; */
+    padding-left: 4%;
+    margin-bottom: 25px;
+    border-bottom: 3px solid #4e56cd;
+    padding-bottom: 10px;
+}
+
+.secao p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    text-align: justify;
+    color: #555;
+}
+
+/* cartões dos sonhos */
+.cartoes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.cartao {
+    background: linear-gradient(135deg, #3122b641, #181249);
+    color: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+}
+
+.cartao:hover {
+    transform: translateY(-5px);
+}
+
+.icone {
+    font-size: 3em;
+    margin-bottom: 15px;
+}
+
+.cartao h3 {
+    font-size: 1.4em;
+    margin-bottom: 15px;
+}
+
+.cartao p {
+    font-size: 1em;
+    text-align: center;
+    color: rgba(255,255,255,0.9);
+}
+
+.dicas {
+    background: linear-gradient(135deg, #3122b641, #181249);
+    color: white;
+    padding: 40px;
+    border-radius: 15px;
+    margin: 40px 0;
+}
+
+.dicas h3 {
+    font-size: 1.8em;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.dicas ul {
+    list-style: none;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.dicas li {
+    background-color: rgba(255,255,255,0.2);
+    margin: 15px 0;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1em;
+    position: relative;
+    padding-left: 50px;
+}
+
+.rodape {
+    background: linear-gradient(135deg, #3122b641, #181249), url('menina.jpg');
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.info-estudante {
+    background: linear-gradient(135deg, #3122b641, #181249);
+    padding: 25px;
+    border-radius: 10px;
+    margin: 20px auto;
+    display: inline-block;
+    max-width: 400px;
+}
+
+.info-estudante h3 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+.info-estudante p {
+    font-size: 1em;
+    margin: 5px 0;
+    text-align: center;
+}
+
+.rodape > .conteudo > p {
+    margin-top: 20px;
+    color: #ccc;
+}
+
+.tipos {
+  /* max-width: 1100px;  */
   margin: 0 auto;
-  max-width: var(--content-max-width);
-  min-height: calc(100% - var(--footer-height));
-  box-sizing: border-box;
-  padding: 20px;
-  background: #fff;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 
-.hero-img{
-  display:block;
-  margin:12px auto;
-  width: 75%;
-  height:auto;
-  border-radius:6px;
+.imagem-container {
+  width: 100%;
 }
 
-header.banner{
-  height: 180px;
+.imagem-dos-sonhos {
+  width: 100%;
+  height: 520px;      /* altura*/
+  object-fit: cover;  /*corta sem distorcer*/
+  display: block;
   border-radius: 8px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  color: #fff;
-  margin-bottom: 18px;
-  background: linear-gradient(90deg, var(--brand-color-1), var(--brand-color-2));
-  position: relative;
+}
+
+.subtema .texto_insonia {
+  font-size: 1.05rem;
+  color: #555;
+  margin-bottom: 16px;
+}
+
+.subtema .subtema-grid {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 28px;
+  align-items: start;
+  margin-top: 20px;
+  margin-bottom: 36px;
+}
+
+.subtema .subtexto h3 {
+  margin-top: 30px;
+  margin-bottom: 8px;
+  color: #222;
+  font-size: 1.15rem;
+  border-left: 4px solid #4e56cd;
+  padding-left: 10px;
+}
+
+.subtema .subtexto p {
+  color: #555;
+  text-align: justify;
+  margin-bottom: 12px;
+}
+
+.subtema .subimagem {
+  background: #fff;
+  border-radius: 10px;
   overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  text-align: center;
+  padding-bottom: 8px;
 }
 
-header.banner h1{
-  margin:0;
-  font-size:2rem;
-  letter-spacing: 1px;
+.subtema .subimagem img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  display: block;
 }
 
-header.banner p.subtitle{
-  margin:6px 0 0 0;
-  font-size:0.95rem;
-  opacity:0.95;
+.subtema .subimagem figcaption {
+  font-size: 0.9rem;
+  color: #666;
+  padding: 10px;
 }
 
-main{
-  padding: 14px 8px;
+.subtema .dicas-praticas {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+.subtema .dicas-praticas li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 10px;
+  background: rgba(78, 205, 196, 0.06);
+  padding: 10px 12px;
+  border-radius: 6px;
+  color: #333;
 }
 
-h2{margin-top:0.2rem;}
-
-.lead{
-  color:var(--muted);
-  line-height:1.5;
+/* passos ordenados */
+.subtema .steps {
+  padding-left: 18px;
+  margin-top: 8px;
 }
-
-table.info{
-  width:100%;
-  border-collapse: collapse;
-  margin-top:14px;
-  margin-bottom:18px;
-}
-table.info th, table.info td{
-  border:1px solid #e6e6e6;
-  padding:8px 10px;
-  text-align:left;
-  font-size:0.95rem;
-}
-table.info th{
-  background: #f7f7f7;
-}
-
-.card{
-  border:1px solid #eee;
-  padding:14px;
-  border-radius:6px;
-  margin-bottom:14px;
-  background: linear-gradient(180deg, #fff, #fbfdff);
-}
-
-a{color: #1a73e8; text-decoration:none}
-a:hover{text-decoration:underline}
-
-footer{
-  height: var(--footer-height);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:0.95rem;
-  color:var(--muted);
-}
-
-.footer-inner{
-  width:100%;
-  max-width: var(--content-max-width);
-  box-sizing:border-box;
-  padding: 10px calc(var(--margin-side));
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-}
-
-.credits{font-weight:600}
-
-@media (max-width: 700px){
-  :root{ --margin-side: 8%; }
-  header.banner{height:140px}
-  header.banner h1{font-size:1.4rem}
+.subtema .steps li {
+  margin-bottom: 10px;
+  color: #333;
+  background: rgba(49,34,182,0.04);
+  padding: 8px 10px;
+  border-radius: 6px;
 }
